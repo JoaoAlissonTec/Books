@@ -1,0 +1,11 @@
+.routeButton{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #00a2ff;
+    color: white;
+    text-decoration: none;
+}
+
+.routeButton:hover{
+    background-color: #007dc5;
+}
