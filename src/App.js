@@ -12,11 +12,13 @@ function App() {
     <Router>
       <div className="App">
         <Header/>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/autores' element={<Authors authors={authors}/>}/>
-          <Route path='/autor' element={<Author authors={authors}/>}/>
-        </Routes>
+        <div className="Container">
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/autores' element={<Authors authors={authors}/>}/>
+            <Route path='/autor' element={<Author authors={authors}/>}/>
+          </Routes>
+        </div>
       </div>
     </Router>
   );

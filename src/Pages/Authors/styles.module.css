@@ -1,0 +1,10 @@
+.container{
+    text-align: center;
+}
+
+.authors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
