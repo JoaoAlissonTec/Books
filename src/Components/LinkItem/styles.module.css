@@ -4,5 +4,5 @@
 }
 
 .item:hover{
-    color: red;
+    color: var(--primary-color);
 }

@@ -5,5 +5,5 @@
 }
 
 .icon_button:hover{
-    color: red;
+    color: var(--primary-color);
 }

@@ -5,6 +5,14 @@
     margin-bottom: 20px;
 }
 
+.icon_text svg{
+    color: var(--primary-color);
+}
+
 .icon_text h2{
     margin: 0;
+}
+
+.empty{
+    color: grey;
 }

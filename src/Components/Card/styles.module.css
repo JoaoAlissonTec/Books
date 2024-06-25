@@ -1,10 +1,11 @@
 .card{
-    border: 1px solid #bdbdbd;
+    border: 1px solid lch(from var(--grey-color) calc(l + 20) c h);
     display: flex;
     flex-direction: column;
     align-items: start;
     text-align: start;
-    padding: 10px 15px;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 .small_size{
@@ -25,7 +26,7 @@
 
 .subtitle{
     font-size: 0.9em;
-    color: #a1a1a1;
+    color: var(--grey-color);
 }
 
 .desc{

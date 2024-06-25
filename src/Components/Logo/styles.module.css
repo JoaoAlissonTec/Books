@@ -3,5 +3,5 @@
 }
 
 .logo::first-letter{
-    color: red;
+    color: var(--primary-color);
 }

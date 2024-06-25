@@ -11,7 +11,9 @@ export default function Author({authors, books}){
 
     const navigate = useNavigate();
 
-    let author = authors.filter((author)=>author.id === parseInt(searchParams.get("id")))[0];
+    const author = authors.find((author)=>author.id === parseInt(searchParams.get("id")));
+
+    const booksFilter = books.filter((book)=>book.author_id === author.id);
 
     return <div>
         <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft/>}/>
@@ -20,12 +22,12 @@ export default function Author({authors, books}){
             <FaBook/>
             <h2>Livros</h2>
         </div>
-        {books.map((book)=>book.author_id === author.id ? <Card 
+        {booksFilter.length > 0 ? booksFilter.map((book)=><Card 
         key={book.id} 
         title={book.title} 
         subtitle={authors.find((author)=>author.id === book.author_id).nome}
-        className="medium_size">
+        className="small_size">
             <RouteButton to={"/livro?id="+book.id} title="Mais"/>
-        </Card> : <></>)}
+        </Card>) : <p className={styles.empty}>Não há livros</p>}
     </div>
 }

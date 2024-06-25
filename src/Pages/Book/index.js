@@ -8,7 +8,7 @@ export default function Book({authors, books}){
 
     const navigate = useNavigate();
 
-    let book = books.filter((book)=>book.id === parseInt(searchParams.get("id")))[0];
+    const book = books.find((book)=>book.id === parseInt(searchParams.get("id")));
 
     return <div>
         <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft/>}/>

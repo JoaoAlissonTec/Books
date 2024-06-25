@@ -1,0 +1,6 @@
+:root{
+    --primary-color: rgb(0, 187, 0);
+    --info-button-color: #00a2ff;
+    --info-button-hover-color: lch(from var(--info-button-color) calc(l - 20) c h);
+    --grey-color: #a1a1a1;
+}
