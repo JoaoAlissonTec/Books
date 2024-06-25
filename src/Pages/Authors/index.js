@@ -4,6 +4,7 @@ import styles from './styles.module.css'
 import RouteButton from "../../Components/RouteButton";
 
 export default function Authors({authors}){
+
     return <div className={styles.container}>
         <h1>Autores</h1>
         <div className={styles.authors}>

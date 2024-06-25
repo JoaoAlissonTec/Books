@@ -5,6 +5,9 @@ import Home from './Pages/Home';
 import Authors from './Pages/Authors';
 import Author from './Pages/Author';
 import authors from './Data/authors';
+import Books from './Pages/Books';
+import Book from './Pages/Book';
+import books from './Data/books';
 
 function App() {
 
@@ -15,8 +18,10 @@ function App() {
         <div className="Container">
           <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/autores' element={<Authors authors={authors}/>}/>
-            <Route path='/autor' element={<Author authors={authors}/>}/>
+            <Route path='/autores' element={<Authors authors={authors} books={books}/>}/>
+            <Route path='/autor' element={<Author authors={authors} books={books}/>}/>
+            <Route path='/livros' element={<Books authors={authors} books={books}/>}/>
+            <Route path='/livro' element={<Book authors={authors} books={books}/>}/>
           </Routes>
         </div>
       </div>

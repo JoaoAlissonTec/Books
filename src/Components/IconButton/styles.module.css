@@ -1,0 +1,9 @@
+.icon_button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon_button:hover{
+    color: red;
+}
