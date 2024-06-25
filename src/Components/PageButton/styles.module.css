@@ -1,0 +1,13 @@
+.page_button{
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;   
+}
+
+.active{
+    transition: .3s;
+    background-color: var(--primary-color);
+    color: white;
+}
