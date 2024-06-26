@@ -19,11 +19,12 @@ export default function Books({authors, books}){
         <h1>Livros</h1>
         <div className={styles.books}>
             {currentPageItems.map((book)=><Card 
-            key={book.id} 
+            key={book._id} 
             title={book.title} 
-            subtitle={authors.find((author)=>author.id === book.author_id).nome}
+            subtitle={book.ano_publicacao}
+            desc={authors.find((author)=>author._id === book.author._id).nome}
             className="medium_size">
-                <RouteButton to={"/livro?id="+book.id} title="Mais"/>
+                <RouteButton to={"/livro?id="+book._id} title="Mais"/>
             </Card>)}
         </div>
         <PageBar totalPages={totalPages} currentPage={currentPage} handlePageChange={handlePageChange}/>

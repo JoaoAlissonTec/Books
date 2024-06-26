@@ -1,125 +1,246 @@
 const books = [
     {
         "id": 1,
-        "title": "Cem Anos de Solidão",
+        "title": "O Segredo do Passado",
         "author_id": 1,
-        "ano_de_publicacao": 1967
+        "ano_de_publicacao": 2010
     },
     {
         "id": 2,
-        "title": "O Amor nos Tempos do Cólera",
-        "author_id": 1,
-        "ano_de_publicacao": 1985
+        "title": "A Máquina do Tempo",
+        "author_id": 2,
+        "ano_de_publicacao": 2005
     },
     {
         "id": 3,
-        "title": "Crônica de uma Morte Anunciada",
-        "author_id": 1,
-        "ano_de_publicacao": 1981
+        "title": "Aventuras no Jardim Encantado",
+        "author_id": 3,
+        "ano_de_publicacao": 2018
     },
     {
         "id": 4,
-        "title": "Orgulho e Preconceito",
-        "author_id": 2,
-        "ano_de_publicacao": 1813
+        "title": "À Beira do Abismo",
+        "author_id": 4,
+        "ano_de_publicacao": 2012
     },
     {
         "id": 5,
-        "title": "Razão e Sensibilidade",
-        "author_id": 2,
-        "ano_de_publicacao": 1811
+        "title": "A Luta pela Justiça",
+        "author_id": 5,
+        "ano_de_publicacao": 2016
     },
     {
         "id": 6,
-        "title": "Emma",
-        "author_id": 2,
-        "ano_de_publicacao": 1815
+        "title": "O Enigma do Espelho",
+        "author_id": 6,
+        "ano_de_publicacao": 2008
     },
     {
         "id": 7,
-        "title": "Harry Potter e a Pedra Filosofal",
-        "author_id": 3,
-        "ano_de_publicacao": 1997
+        "title": "Caminho para o Sucesso",
+        "author_id": 7,
+        "ano_de_publicacao": 2014
     },
     {
         "id": 8,
-        "title": "Harry Potter e a Câmara Secreta",
-        "author_id": 3,
-        "ano_de_publicacao": 1998
+        "title": "Segredos Perdidos da História",
+        "author_id": 8,
+        "ano_de_publicacao": 2020
     },
     {
         "id": 9,
-        "title": "Harry Potter e o Prisioneiro de Azkaban",
-        "author_id": 3,
-        "ano_de_publicacao": 1999
+        "title": "Paixão à Primeira Vista",
+        "author_id": 9,
+        "ano_de_publicacao": 2007
     },
     {
         "id": 10,
-        "title": "1984",
-        "author_id": 4,
-        "ano_de_publicacao": 1949
+        "title": "Memórias do Passado",
+        "author_id": 10,
+        "ano_de_publicacao": 2011
     },
     {
         "id": 11,
-        "title": "A Revolução dos Bichos",
-        "author_id": 4,
-        "ano_de_publicacao": 1945
+        "title": "Versos de Amor",
+        "author_id": 11,
+        "ano_de_publicacao": 2019
     },
     {
         "id": 12,
-        "title": "Lutando na Espanha",
-        "author_id": 4,
-        "ano_de_publicacao": 1938
+        "title": "Pesadelos Noturnos",
+        "author_id": 12,
+        "ano_de_publicacao": 2009
     },
     {
         "id": 13,
-        "title": "Meio Sol Amarelo",
-        "author_id": 5,
-        "ano_de_publicacao": 2006
-    },
-    {
-        "id": 14,
-        "title": "Americanah",
-        "author_id": 5,
+        "title": "Um Amor para Recordar",
+        "author_id": 13,
         "ano_de_publicacao": 2013
     },
     {
+        "id": 14,
+        "title": "A Ciência dos Planetas",
+        "author_id": 14,
+        "ano_de_publicacao": 2017
+    },
+    {
         "id": 15,
-        "title": "Hibisco Roxo",
-        "author_id": 5,
-        "ano_de_publicacao": 2003
+        "title": "Equilíbrio Interior",
+        "author_id": 15,
+        "ano_de_publicacao": 2015
     },
     {
         "id": 16,
-        "title": "Viver para Contar",
-        "author_id": 1,
-        "ano_de_publicacao": 2002
+        "title": "Caminhos Perdidos",
+        "author_id": 16,
+        "ano_de_publicacao": 2010
     },
     {
         "id": 17,
-        "title": "Mansfield Park",
-        "author_id": 2,
-        "ano_de_publicacao": 1814
+        "title": "No Limite da Loucura",
+        "author_id": 17,
+        "ano_de_publicacao": 2012
     },
     {
         "id": 18,
-        "title": "Harry Potter e o Cálice de Fogo",
-        "author_id": 3,
-        "ano_de_publicacao": 2000
+        "title": "Estratégias para o Sucesso",
+        "author_id": 18,
+        "ano_de_publicacao": 2014
     },
     {
         "id": 19,
-        "title": "Dias de Natal",
-        "author_id": 4,
-        "ano_de_publicacao": 1940
+        "title": "A Jornada do Herói",
+        "author_id": 19,
+        "ano_de_publicacao": 2008
     },
     {
         "id": 20,
-        "title": "No Seu Pescoço",
+        "title": "Segredos do Crime",
+        "author_id": 20,
+        "ano_de_publicacao": 2016
+    },
+    {
+        "id": 21,
+        "title": "Sombras do Passado",
+        "author_id": 1,
+        "ano_de_publicacao": 2006
+    },
+    {
+        "id": 22,
+        "title": "A Ilha Misteriosa",
+        "author_id": 2,
+        "ano_de_publicacao": 2011
+    },
+    {
+        "id": 23,
+        "title": "O Mistério do Anel Encantado",
+        "author_id": 3,
+        "ano_de_publicacao": 2013
+    },
+    {
+        "id": 24,
+        "title": "O Lado Sombrio da Alma",
+        "author_id": 4,
+        "ano_de_publicacao": 2017
+    },
+    {
+        "id": 25,
+        "title": "Revolução Social",
         "author_id": 5,
+        "ano_de_publicacao": 2019
+    },
+    {
+        "id": 26,
+        "title": "O Assassinato na Villa",
+        "author_id": 6,
+        "ano_de_publicacao": 2007
+    },
+    {
+        "id": 27,
+        "title": "O Poder da Mente",
+        "author_id": 7,
+        "ano_de_publicacao": 2015
+    },
+    {
+        "id": 28,
+        "title": "Grandes Conspirações",
+        "author_id": 8,
+        "ano_de_publicacao": 2018
+    },
+    {
+        "id": 29,
+        "title": "Almas Gêmeas",
+        "author_id": 9,
         "ano_de_publicacao": 2009
+    },
+    {
+        "id": 30,
+        "title": "O Segredo da Pirâmide",
+        "author_id": 10,
+        "ano_de_publicacao": 2010
+    },
+    {
+        "id": 31,
+        "title": "Poemas da Natureza",
+        "author_id": 11,
+        "ano_de_publicacao": 2012
+    },
+    {
+        "id": 32,
+        "title": "A Mansão Abandonada",
+        "author_id": 12,
+        "ano_de_publicacao": 2014
+    },
+    {
+        "id": 33,
+        "title": "Destino Traçado",
+        "author_id": 13,
+        "ano_de_publicacao": 2016
+    },
+    {
+        "id": 34,
+        "title": "O Universo em Números",
+        "author_id": 14,
+        "ano_de_publicacao": 2018
+    },
+    {
+        "id": 35,
+        "title": "Equilíbrio Emocional",
+        "author_id": 15,
+        "ano_de_publicacao": 2020
+    },
+    {
+        "id": 36,
+        "title": "Uma Volta ao Mundo",
+        "author_id": 16,
+        "ano_de_publicacao": 2011
+    },
+    {
+        "id": 37,
+        "title": "O Segredo do Abismo",
+        "author_id": 17,
+        "ano_de_publicacao": 2013
+    },
+    {
+        "id": 38,
+        "title": "Negócios de Sucesso",
+        "author_id": 18,
+        "ano_de_publicacao": 2015
+    },
+    {
+        "id": 39,
+        "title": "Aventuras na Floresta Encantada",
+        "author_id": 19,
+        "ano_de_publicacao": 2017
+    },
+    {
+        "id": 40,
+        "title": "O Mistério da Mansão Assombrada",
+        "author_id": 20,
+        "ano_de_publicacao": 2019
     }
 ]
+
 
 
 export default books;

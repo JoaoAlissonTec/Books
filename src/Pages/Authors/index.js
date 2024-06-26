@@ -16,18 +16,20 @@ export default function Authors({authors}){
         setCurrentPage(page);
     }
 
+    console.log()
+
     return <div className={styles.container}>
         <h1>Autores</h1>
         <div className={styles.authors}>
             {currentPageItems.map((author)=><Card 
-            key={author.id}
-            id={author.id} 
+            key={author._id}
+            id={author._id} 
             title={author.nome} 
             subtitle={author.ano_de_nascimento} 
             desc={author.biografia} 
             className="medium_size"
             >
-                <RouteButton title="Sobre" to={"/autor?id="+author.id}/>
+                <RouteButton title="Sobre" to={"/autor?id="+author._id}/>
             </Card>)
             }
         </div>

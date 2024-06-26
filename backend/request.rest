@@ -1,0 +1,65 @@
+POST http://localhost:3002/api/books
+Content-Type: application/json
+
+{
+    "title": "Versos de Amor",
+    "ano_publicacao": "2012-01-01 00:00:00",
+    "author":{
+        "nome": "Karen Hill",
+        "biografia": "teste",
+        "ano_de_nascimento": "1989-01-01 00:00:00"
+    }
+}
+
+###
+GET http://localhost:3002/api/books
+
+###
+GET http://localhost:3002/api/books/667c2024538dab6f1a3ee584
+
+###
+DELETE http://localhost:3002/api/books/667c2024538dab6f1a3ee584
+
+###
+PUT http://localhost:3002/api/books/667c1a8b3e98bf9e812867ae
+Content-Type: application/json
+
+{
+    "title": "Versos de Amor!",
+    "ano_publicacao": "2012-01-01 00:00:00",
+    "author":{
+        "_id": "667c278e8abd472142632006",
+    "nome": "Karen Hill",
+    "biografia": "teste",
+    "ano_de_nascimento": "1989-01-01T02:00:00.000Z"
+    }
+}
+
+###
+POST http://localhost:3002/api/autores
+Content-Type: application/json
+
+{
+    "nome": "Karen Hill",
+    "biografia": "teste",
+    "ano_de_nascimento": "1989-01-01 00:00:00"
+}
+
+###
+GET http://localhost:3002/api/autores
+
+###
+GET http://localhost:3002/api/autores/667c2744967b696f7cf5aa11
+
+###
+DELETE http://localhost:3002/api/autores/667c2744967b696f7cf5aa11
+
+###
+PUT http://localhost:3002/api/autores/667c2744967b696f7cf5aa11
+Content-Type: application/json
+
+{
+    "nome": "Karen Hill",
+    "biografia": "teste",
+    "ano_de_nascimento": "1989-01-01 00:00:00"
+}

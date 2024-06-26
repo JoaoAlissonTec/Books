@@ -1,31 +1,25 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './Components/Header';
-import Home from './Pages/Home';
-import Authors from './Pages/Authors';
-import Author from './Pages/Author';
-import authors from './Data/authors';
-import Books from './Pages/Books';
-import Book from './Pages/Book';
-import books from './Data/books';
+import RoutesApp from './Routes';
+import {AuthProvider} from './Context/AuthContext'
+import { useEffect, useState } from 'react';
+import api from './Services/api';
 
 function App() {
 
+  const [books, setBooks] = useState([]);
+  const [authors, setAuthors] = useState([]);
+
+  useEffect(()=>{
+    api.get("/books").then(({data})=>setBooks(data))
+    api.get("/autores").then(({data})=>setAuthors(data))
+  }, []);
+  
   return (
-    <Router>
+    <AuthProvider>
       <div className="App">
-        <Header/>
-        <div className="Container">
-          <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/autores' element={<Authors authors={authors} books={books}/>}/>
-            <Route path='/autor' element={<Author authors={authors} books={books}/>}/>
-            <Route path='/livros' element={<Books authors={authors} books={books}/>}/>
-            <Route path='/livro' element={<Book authors={authors} books={books}/>}/>
-          </Routes>
-        </div>
+        <RoutesApp authors={authors} books={books}/>
       </div>
-    </Router>
+    </AuthProvider>
   );
 }
 
