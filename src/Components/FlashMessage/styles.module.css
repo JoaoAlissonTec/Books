@@ -1,0 +1,9 @@
+.container{
+    color: white;
+    padding: 5px 10px;
+    position: fixed;
+}
+
+.success{
+    background-color: green;
+}

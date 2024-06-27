@@ -32,3 +32,8 @@
 .desc{
     font-size: 1em;
 }
+
+.control{
+    display: flex;
+    gap: 10px;
+}

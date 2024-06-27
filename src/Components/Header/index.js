@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles.module.css'
-import Navbar from '../Navbar'
-import Logo from '../Logo'
+import Logo from './Logo'
+import Navbar from './Navbar'
 
 export default function Header(){
     return <header className={styles.header}>

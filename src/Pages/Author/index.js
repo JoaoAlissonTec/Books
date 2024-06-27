@@ -1,12 +1,16 @@
-import React from "react"
+import React, { useContext } from "react"
 import { useNavigate, useSearchParams } from "react-router-dom"
 import Card from "../../Components/Card";
 import RouteButton from "../../Components/RouteButton";
 import {FaBook, FaChevronLeft} from 'react-icons/fa'
 import IconButton from "../../Components/IconButton";
 import styles from "./styles.module.css";
+import { Context } from "../../Context/DataContext";
 
-export default function Author({authors, books}){
+export default function Author(){
+
+    const {authors, books} = useContext(Context)
+
     const [searchParams] = useSearchParams()
 
     const navigate = useNavigate();
@@ -28,7 +32,7 @@ export default function Author({authors, books}){
         subtitle={book.ano_publicacao}
         desc={authors.find((author)=>author._id === book.author._id).nome}
         className="small_size">
-            <RouteButton to={"/livro?id="+book._id} title="Mais"/>
+            <RouteButton title="Mais" to={"/livro?id="+book._id}/>
         </Card>) : <p className={styles.empty}>Não há livros</p>}
     </div>
 }

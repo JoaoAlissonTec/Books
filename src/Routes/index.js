@@ -6,19 +6,21 @@ import Books from "../Pages/Books"
 import Book from "../Pages/Book"
 import Home from "../Pages/Home"
 import Header from "../Components/Header"
-import Login from "../Pages/Login"
+import BookCreate from "../Pages/BookCreate"
+import AuthorCreate from "../Pages/AuthorCreate"
 
-export default function RoutesApp({authors, books}){
+export default function RoutesApp(){
     return <Router>
     <Header/>
     <div className="Container">
       <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/autores' element={<Authors authors={authors} books={books}/>}/>
-          <Route path='/autor' element={<Author authors={authors} books={books}/>}/>
-          <Route path='/livros' element={<Books authors={authors} books={books}/>}/>
-          <Route path='/livro' element={<Book authors={authors} books={books}/>}/>
+          <Route path='/autores' element={<Authors/>}/>
+          <Route path='/autores/new' element={<AuthorCreate/>}/>
+          <Route path='/autor' element={<Author/>}/>
+          <Route path='/livros' element={<Books/>}/>
+          <Route path='/livros/new' element={<BookCreate/>}/>
+          <Route path='/livro' element={<Book/>}/>
       </Routes>
     </div>
   </Router>

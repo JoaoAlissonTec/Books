@@ -1,4 +1,4 @@
-import PageButton from "../PageButton";
+import PageButton from "./PageButton";
 import styles from './styles.module.css'
 
 export default function PageBar({totalPages, currentPage, handlePageChange}){

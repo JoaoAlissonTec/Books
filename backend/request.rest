@@ -2,12 +2,13 @@ POST http://localhost:3002/api/books
 Content-Type: application/json
 
 {
-    "title": "Versos de Amor",
-    "ano_publicacao": "2012-01-01 00:00:00",
+    "title": "Segredos Perdidos da História",
+    "ano_publicacao": "2020-01-01 00:00:00",
     "author":{
-        "nome": "Karen Hill",
-        "biografia": "teste",
-        "ano_de_nascimento": "1989-01-01 00:00:00"
+        "nome": "Daniel Clark",
+    "biografia": "Daniel Clark é um autor de livros de história, especializado em eventos históricos pouco conhecidos e suas repercussões.",
+    "ano_de_nascimento": "1982-01-01T03:00:00.000Z",
+    "_id": "667c346d8abd47214263203f"
     }
 }
 
@@ -18,7 +19,7 @@ GET http://localhost:3002/api/books
 GET http://localhost:3002/api/books/667c2024538dab6f1a3ee584
 
 ###
-DELETE http://localhost:3002/api/books/667c2024538dab6f1a3ee584
+DELETE http://localhost:3002/api/books/667d395d82fdd34f9c1f659b
 
 ###
 PUT http://localhost:3002/api/books/667c1a8b3e98bf9e812867ae
@@ -40,9 +41,9 @@ POST http://localhost:3002/api/autores
 Content-Type: application/json
 
 {
-    "nome": "Karen Hill",
-    "biografia": "teste",
-    "ano_de_nascimento": "1989-01-01 00:00:00"
+    "nome": "Daniel Clark",
+    "biografia": "Daniel Clark é um autor de livros de história, especializado em eventos históricos pouco conhecidos e suas repercussões.",
+    "ano_de_nascimento": "1982-01-01 00:00:00"
 }
 
 ###
@@ -59,7 +60,7 @@ PUT http://localhost:3002/api/autores/667c2744967b696f7cf5aa11
 Content-Type: application/json
 
 {
-    "nome": "Karen Hill",
-    "biografia": "teste",
-    "ano_de_nascimento": "1989-01-01 00:00:00"
+    "nome": "Daniel Clark",
+    "biografia": "Daniel Clark é um autor de livros de história, especializado em eventos históricos pouco conhecidos e suas repercussões.",
+    "ano_de_nascimento": "1982-01-01 00:00:00"
 }

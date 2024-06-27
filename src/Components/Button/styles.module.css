@@ -1,4 +1,4 @@
-.routeButton{
+.button{
     padding: 5px 10px;
     border-radius: 5px;
     background-color: var(--info-button-color);
@@ -6,10 +6,12 @@
     align-items: center;
     gap: 5px;
     color: white;
-    text-decoration: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
 }
 
-.routeButton svg{
+.button svg{
     color: white;
     font-size: 10px;
 }
@@ -18,10 +20,18 @@
     background-color: var(--primary-color);
 }
 
-.routeButton:hover{
+.button:hover{
     background-color: var(--info-button-hover-color);
 }
 
 .primary-color:hover{
     background-color: var(--primary-hover-color);
+}
+
+.red-color{
+    background-color: var(--red-color);
+}
+
+.red-color:hover{
+    background-color: var(--red-hover-color);
 }
