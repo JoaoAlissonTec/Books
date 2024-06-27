@@ -49,7 +49,7 @@ export default function Books(){
             title={book.title} 
             subtitle={getYear(book.ano_publicacao)}
             desc={authors.find((author)=>author._id === book.author._id) && authors.find((author)=>author._id === book.author._id).nome}
-            className="medium_size">
+            className="large_size">
                 {showAlert === book._id && <Alert title="Excluir" text={`Deseja excluir o livro ${book.title}?`} onClick={()=>handleDelete(book._id)} onDispose={setShowAlert}/>}
                 <RouteButton title="Mais" to={"/livro?id="+book._id}/>
                 <Button className="red-color" title="Excluir" onClick={()=>handleShowAlert(book._id)}/>

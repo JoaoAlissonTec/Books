@@ -50,7 +50,7 @@ export default function Authors(){
             title={author.nome} 
             subtitle={getYear(author.ano_de_nascimento)} 
             desc={author.biografia} 
-            className="medium_size"
+            className="large_size"
             >
                 {showAlert === author._id && <Alert title="Excluir" text={`Deseja excluir o autor ${author.nome}?`} onClick={()=>handleDelete(author._id)} onDispose={setShowAlert}/>}
                 <RouteButton title="Sobre" to={"/autor?id="+author._id}/>
