@@ -5,21 +5,29 @@ import RouteButton from "../../Components/RouteButton";
 import PageBar from "../../Components/PageBar";
 import paginate from "../../Utils/paginate";
 import getYear from "../../Utils/getYear";
-import { FaPlus } from "react-icons/fa";
+import { FaEdit, FaList, FaPlus, FaTrash } from "react-icons/fa";
 import { Context } from "../../Context/DataContext";
 import api from "../../Services/api";
 import Button from "../../Components/Button";
 import Alert from "./Alert";
+import Menu from "../../Components/Menu";
+import { useNavigate } from "react-router-dom";
+import IconButton from "../../Components/IconButton";
 
 export default function Authors(){
 
     const {authors, setAuthors} = useContext(Context);
     const [showAlert, setShowAlert] = useState();
+    const [showMenu, setShowMenu] = useState();
 
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 10;
 
+    const navigate = useNavigate()
+
     const {currentPageItems, totalPages} = paginate(authors, currentPage, itemsPerPage);
+
+    const iconButtonStyle = {border: "1px solid var(--grey-color)"}
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
@@ -53,8 +61,9 @@ export default function Authors(){
             className="large_size"
             >
                 {showAlert === author._id && <Alert title="Excluir" text={`Deseja excluir o autor ${author.nome}?`} onClick={()=>handleDelete(author._id)} onDispose={setShowAlert}/>}
-                <RouteButton title="Sobre" to={"/autor?id="+author._id}/>
-                <Button className="red-color" title="Excluir" onClick={()=>handleShowAlert(author._id)}/>
+                <RouteButton title="Sobre" to={"/autor/"+author._id} className="primary-color"/>
+                <IconButton icon={<FaList/>} style={iconButtonStyle} onClick={()=>{setShowMenu(author._id !== showMenu ? author._id : null)}}/>
+                {showMenu === author._id && <Menu options={[{icon: <FaEdit/>, text: "Editar", onClick: ()=>{navigate("/autor/"+author._id+"/edit")}}, {icon: <FaTrash/>, text: "Excluir", onClick: ()=>handleShowAlert(author._id)}]}/>}
             </Card>)
             }
         </div>

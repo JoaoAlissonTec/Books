@@ -8,6 +8,8 @@ import Home from "../Pages/Home"
 import Header from "../Components/Header"
 import BookCreate from "../Pages/BookCreate"
 import AuthorCreate from "../Pages/AuthorCreate"
+import BookEdit from "../Pages/BookEdit"
+import AuthorEdit from "../Pages/AuthorEdit"
 
 export default function RoutesApp(){
     return <Router>
@@ -17,10 +19,12 @@ export default function RoutesApp(){
           <Route path='/' element={<Home/>}/>
           <Route path='/autores' element={<Authors/>}/>
           <Route path='/autores/new' element={<AuthorCreate/>}/>
-          <Route path='/autor' element={<Author/>}/>
+          <Route path='/autor/:id/edit' element={<AuthorEdit/>}/>
+          <Route path='/autor/:id' element={<Author/>}/>
           <Route path='/livros' element={<Books/>}/>
           <Route path='/livros/new' element={<BookCreate/>}/>
-          <Route path='/livro' element={<Book/>}/>
+          <Route path='/livro/:id' element={<Book/>}/>
+          <Route path='/livro/:id/edit' element={<BookEdit/>}/>
       </Routes>
     </div>
   </Router>

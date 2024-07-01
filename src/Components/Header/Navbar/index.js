@@ -5,7 +5,7 @@ import LinkItem from "../../LinkItem"
 export default function Navbar(){
     return <nav className={styles.nav}>
         <LinkItem exact title="Home" to="/"/>
-        <LinkItem title="Autores" to="/autores"/>
         <LinkItem title="Livros" to="/livros"/>
+        <LinkItem title="Autores" to="/autores"/>
     </nav>
 }

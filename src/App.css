@@ -1,7 +1,12 @@
 @import url("./theme.css");
 
+.App{
+  height: 80%;
+}
+
 .Container{
   padding: 10px 10px 20px 20px;
+  height: 100%;
 }
 
 body::-webkit-scrollbar {

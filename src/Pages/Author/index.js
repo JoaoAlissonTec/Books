@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import { useNavigate, useSearchParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import Card from "../../Components/Card";
 import RouteButton from "../../Components/RouteButton";
 import {FaBook, FaChevronLeft} from 'react-icons/fa'
@@ -11,15 +11,15 @@ export default function Author(){
 
     const {authors, books} = useContext(Context)
 
-    const [searchParams] = useSearchParams()
+    const {id} = useParams()
 
     const navigate = useNavigate();
 
-    const author = authors.find((author)=>author._id.toString() === searchParams.get("id"));
+    const author = authors.find((author)=>author._id.toString() === id);
 
-    const booksFilter = books.filter((book)=>book.author._id === author._id);
+    const booksFilter = author && books.filter((book)=>book.author._id === author._id);
 
-    return <div>
+    return author && <div>
         <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft/>}/>
         <h1>Autor: {author.nome}</h1>
         <div className={styles.icon_text}>
@@ -32,7 +32,7 @@ export default function Author(){
         subtitle={book.ano_publicacao}
         desc={authors.find((author)=>author._id === book.author._id).nome}
         className="small_size">
-            <RouteButton title="Mais" to={"/livro?id="+book._id}/>
+            <RouteButton title="Mais" to={"/livro/"+book._id} className="primary-color"/>
         </Card>) : <p className={styles.empty}>Não há livros</p>}
     </div>
 }
