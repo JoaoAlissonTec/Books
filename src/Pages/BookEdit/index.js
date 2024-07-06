@@ -7,7 +7,6 @@ import { useContext, useEffect, useState } from "react";
 import { Context } from "../../Context/DataContext";
 import api from "../../Services/api";
 import formatDate from "../../Utils/formatDate";
-import styles from './styles.module.css'
 
 export default function BookEdit(){
 
@@ -28,7 +27,7 @@ export default function BookEdit(){
             setPublish(formatDate(new Date(book.ano_publicacao)))
             setAuthor(book.author._id)
         }
-    }, [authors, books])
+    }, [authors, book])
 
     function handleSubmit(event){
         event.preventDefault(event)
@@ -53,18 +52,20 @@ export default function BookEdit(){
     }
 
     return <div>
-        <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft/>}/>
-        <h1>Editar Livro</h1>
-        <form onSubmit={handleSubmit} className={styles.form}>
-        <Input id="title" title="Título" type="text" value={title} onChange={(event) => setTitle(event.target.value)}/>
-        <Input id="ano_publicacao" title="Ano de Publicação" type="date" value={publish} onChange={(event)=>setPublish(event.target.value)}/>
+        <div className="flex gap-3">
+            <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft className="size-3"/>}/>
+            <h1 className="font-bold text-lg">Editar Livro</h1>
+        </div>
+        <form onSubmit={handleSubmit} className="w-1/2 flex flex-col gap-2">
+        <Input id="title" className="border p-1" title="Título" type="text" value={title} onChange={(event) => setTitle(event.target.value)}/>
+        <Input id="ano_publicacao" className="border p-1" title="Ano de Publicação" type="date" value={publish} onChange={(event)=>setPublish(event.target.value)}/>
         <Combobox 
         id="author" 
         title="Autor" 
         value={author} 
         options={authors.map((author)=><option key={author._id} value={author._id}>{author.nome}</option>)} 
         onChange={(event)=>setAuthor(event.target.value)}/>
-        <Input value="Enviar" type="submit" className="primary_color"/>
+        <Input value="Enviar" type="submit" className="p-1 bg-green-600 hover:bg-green-700 text-white rounded-lg cursor-pointer"/>
     </form>
     </div>
 }

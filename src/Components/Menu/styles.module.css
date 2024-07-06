@@ -1,8 +1,0 @@
-.Menu{
-    position: absolute;
-    bottom: -20px;
-    right: 55px;
-    display: flex;
-    flex-direction: column;
-    z-index: 100;
-}

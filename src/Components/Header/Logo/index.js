@@ -1,6 +1,5 @@
 import React from "react"
-import styles from "./styles.module.css"
 
 export default function Logo({logo}){
-    return <h1 className={styles.logo}>{logo}</h1>
+    return <h1 className="first-letter:text-green-600 md:text-3xl text-xl">{logo}</h1>
 }

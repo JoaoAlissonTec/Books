@@ -1,9 +1,7 @@
-import styles from '../styles.module.css'
-
 export default function Combobox({title, id, value, options, onChange}){
-    return <div className={`${styles.input}`}>
-        <label htmlFor={id}>{title}</label>
-        <select name={id} id={id} value={value} onChange={onChange}>
+    return <div className="flex flex-col gap-3">
+        <label htmlFor={id} className="text-sm">{title}</label>
+        <select name={id} id={id} className="outline-none border" value={value} onChange={onChange}>
             <option value={null}>- Nenhum Author-</option>
             {options}
         </select>

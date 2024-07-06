@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import Input from "../../Components/Form/Input";
-import styles from "./styles.module.css"
 import { redirect, useNavigate, useParams } from "react-router-dom";
 import api from "../../Services/api";
 import { Context } from "../../Context/DataContext";
@@ -54,12 +53,15 @@ export default function AuthorEdit(){
     }
 
     return <div>
-    <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft/>}/>
-    <h1>Editar Autor</h1><form onSubmit={handleSubmit} className={styles.form}>
-    <Input id="nome" title="Nome" type="text" value={nome} onChange={(event) => setNome(event.target.value)}/>
-    <Input id="biografia" title="Biografia" type="text" value={biografia} onChange={(event)=>setBiografia(event.target.value)}/>
-    <Input id="data" title="Ano de Nascimento" type="date" value={data} onChange={(event)=>setData(event.target.value)}/>
-    <Input value="Enviar" type="submit" className="primary_color"/>
+    <div className="flex gap-3">
+        <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft className="size-3"/>}/>
+        <h1 className="font-bold text-lg">Editar Autor</h1>
+    </div>
+    <form onSubmit={handleSubmit} className="w-1/2 flex flex-col gap-2">
+    <Input id="nome" className="border p-1" title="Nome" type="text" value={nome} onChange={(event) => setNome(event.target.value)}/>
+    <Input id="biografia" className="border p-1" title="Biografia" type="text" value={biografia} onChange={(event)=>setBiografia(event.target.value)}/>
+    <Input id="data" className="border p-1" title="Ano de Nascimento" type="date" value={data} onChange={(event)=>setData(event.target.value)}/>
+    <Input value="Enviar" type="submit" className="p-1 bg-green-600 hover:bg-green-700 text-white rounded-lg cursor-pointer"/>
 </form>
 </div>
 }

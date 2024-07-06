@@ -1,16 +1,15 @@
 import Button from '../../../Components/Button'
-import styles from './styles.module.css'
 
 export default function Alert({title, text, onClick, onDispose}){
-    return <div className={styles.alert}>
-        <div className={styles.alert_box}>
-            <div className={styles.message}>
-                <h2>{title}</h2>
+    return <div className="bg-black-transparent flex items-center justify-center fixed w-full h-full top-0 left-0">
+        <div className="w-1/2 bg-white p-6">
+            <div>
+                <h2 className='font-bold text-lg'>{title}</h2>
                 <p>{text}</p>
             </div>
-            <div className={styles.control}>
-                <Button title="Sim" className="red-color" onClick={onClick}/>
-                <Button title="Não" onClick={()=>{onDispose(false)}}/>
+            <div className="w-full flex justify-end gap-2">
+                <Button title="Excluir" className="bg-red-500 text-white hover:bg-red-700" onClick={onClick}/>
+                <Button title="Cancelar" className="hover:bg-gray-300" onClick={()=>{onDispose(false)}}/>
             </div>
         </div>
     </div>

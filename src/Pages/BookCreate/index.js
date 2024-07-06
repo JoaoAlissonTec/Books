@@ -9,8 +9,10 @@ export default function BookCreate({authors}){
     const navigate = useNavigate()
 
     return <div>
-        <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft/>}/>
-        <h1>Novo Livro</h1>
+        <div className="flex gap-3">
+            <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft className="size-3"/>}/>
+            <h1 className="font-bold text-lg">Novo Livro</h1>
+        </div>
         <Form authors={authors}/>
     </div>
 }

@@ -1,6 +1,7 @@
 import React from "react"
-import styles from './styles.module.css'
 
-export default function IconButton({icon, style, onClick}){
-    return <button onClick={onClick} className={styles.icon_button} style={style}>{icon}</button>
+export default function IconButton({icon, onClick, className}){
+    return <button onClick={onClick} className={`bg-transparent p-2 transition-colors rounded-md ${className ? className : "border-none"} cursor-pointer flex items-center hover:bg-gray-200`}>
+        {icon}
+    </button>
 }

@@ -14,7 +14,7 @@ import AuthorEdit from "../Pages/AuthorEdit"
 export default function RoutesApp(){
     return <Router>
     <Header/>
-    <div className="Container">
+    <div className="md:px-12 md:py-6 px-6 py-3 h-full">
       <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/autores' element={<Authors/>}/>

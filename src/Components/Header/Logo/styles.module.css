@@ -1,7 +1,0 @@
-.logo{
-    font-size: 1.4em;
-}
-
-.logo::first-letter{
-    color: var(--primary-color);
-}
