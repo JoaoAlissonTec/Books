@@ -1,7 +1,7 @@
 import Button from '../../../Components/Button'
 
 export default function Alert({title, text, onClick, onDispose}){
-    return <div className="bg-black-transparent flex items-center justify-center fixed w-full h-full top-0 left-0">
+    return <div className="bg-black-transparent z-50 flex items-center justify-center fixed w-full h-full top-0 left-0">
         <div className="w-1/2 bg-white p-6">
             <div>
                 <h2 className='font-bold text-lg'>{title}</h2>

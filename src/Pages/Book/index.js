@@ -16,8 +16,8 @@ export default function Book(){
     const book = books.find((book)=>book._id.toString() === id);
 
     return book && <div>
-        <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft className="size-3"/>}/>
-        <h1>Livro: {book.title}</h1>
+        <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft className="size-3"/>} text="Voltar"/>
+        <h1 className="font-bold">Livro: {book.title}</h1>
         <p>{getYear(book.ano_publicacao)}</p>
         <p>Autor: {authors.find((author)=>author._id === book.author._id) && authors.find((author)=>author._id === book.author._id).nome}</p>
     </div>
