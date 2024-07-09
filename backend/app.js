@@ -16,6 +16,6 @@ const routes = require("./routes/router")
 
 app.use('/api', routes)
 
-app.listen(3002, function(){
+app.listen(3003, function(){
     console.log("Servidor online")
 })

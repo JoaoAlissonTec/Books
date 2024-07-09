@@ -5,6 +5,7 @@ import RouteButton from "../../Components/RouteButton";
 import {FaBook, FaChevronLeft} from 'react-icons/fa'
 import IconButton from "../../Components/IconButton";
 import { Context } from "../../Context/DataContext";
+import getYear from "../../Utils/getYear";
 
 export default function Author(){
 
@@ -19,7 +20,7 @@ export default function Author(){
     const booksFilter = author && books.filter((book)=>book.author._id === author._id);
 
     return author && <div>
-        <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft className="size-3"/>}/>
+        <IconButton onClick={()=>navigate(-1)} icon={<FaChevronLeft className="size-3"/>} text="Voltar"/>
         <h1 className="font-bold text-lg">Autor: {author.nome}</h1>
         <div className="flex items-center gap-2 mb-3">
             <FaBook className="size-3 text-green-600"/>
@@ -28,7 +29,7 @@ export default function Author(){
         {booksFilter.length > 0 ? booksFilter.map((book)=><Card 
         key={book._id} 
         title={book.title} 
-        subtitle={book.ano_publicacao}
+        subtitle={getYear(book.ano_publicacao)}
         desc={authors.find((author)=>author._id === book.author._id).nome}>
             <RouteButton title="Mais" to={"/livro/"+book._id} className="bg-green-600 hover:bg-green-700"/>
         </Card>) : <p className="text-gray-400">Não há livros</p>}
